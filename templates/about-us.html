@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Dermaid</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    
+}
+
+.main-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* header */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #4CAF50;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-circle img {
+    height: 80px;
+}
+
+nav {
+    margin: 30px 0 0 50px;
+}
+
+nav a {
+    padding-right: 60px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.register-container {
+    margin-right: 10px;
+    padding: 20px;
+}
+
+.login, .signup {
+    padding: 15px 0;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    background: none;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.login a, .signup a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 40px;
+
+}
+
+.login:hover, .signup:hover {
+    cursor: pointer;
+    background: #fff;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+}
+
+.login a:hover, .signup a:hover {
+    color: #4CAF50;
+}
+
+/* Slider */
+.slider-container {
+   margin-right: 20px;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.slider input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-round {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+    border: 1px solid #fff;
+}
+
+.slider-round:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider-round {
+    background-color: #4CAF50;
+}
+
+input:focus + .slider-round {
+    box-shadow: 0 0 1px #fff;
+}
+
+input:checked + .slider-round:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+}
+
+
+
+
+        /* footer */
+footer {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.social-media i, .contact-info i {
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.legal a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.legal a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <div class="main-container">
+    <header>
+        <div class="logo-container">
+            <div class="logo-circle">
+                <img src="/Logo/dermaid-high-resolution-logo-white-transparent (1).png" alt="Dermaid Logo">
+            </div>
+        </div>
+        <div>
+            <nav>
+                <a href="about-us.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+        </div>
+        <div class="register-container">
+            <span class="slider-container">
+                <label class="slider">
+                    <input type="checkbox" id="slider">
+                    <span class="slider-round"></span>
+                </label>
+            </span>
+            <span><button class="login"><a href="login.html">login</a></button></span>
+            <span><button class="signup"><a href="signup.html">signup</a></button></span>
+        </div>
+    </header>
+
+
+    <section id="team-introduction">
+        <div class="container">
+            <h2>Team Introduction</h2>
+            <p>Information about the team behind the tool, including their expertise and mission.</p>
+        </div>
+    </section>
+
+    <section id="technology">
+        <div class="container">
+            <h2>Technology</h2>
+            <p>Explanation of the AI technology used and its accuracy.</p>
+        </div>
+    </section>
+
+    <section id="privacy-policy">
+        <div class="container">
+            <h2>Privacy Policy</h2>
+            <p>Detailed information on how user data is handled and protected.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-brands fa-snapchat"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+        </div>
+        <div class="legal">
+            <a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a>
+        </div>
+    </footer>
+</div>
+
+    <script src="script.js"></script>
+    <script src="darkmode.js"></script>
+</body>
+</html>

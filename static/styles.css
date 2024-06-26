@@ -1,23 +1,387 @@
 body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px; /* Increase the font size as desired */
+}
+
+#banner {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#banner h1 {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#how-it-works {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.step {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.features {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* footer */
+footer {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.social-media i, .contact-info i {
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.legal a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.legal a:hover {
+    text-decoration: underline;
+}
+
+.logo-circle {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    border: 2px solid #4CAF50; /* Green circle */
+    border-radius: 50%;
+    width: 200px; /* Adjust the width */
+    height: 200px; /* Adjust the height */
+    margin-bottom: 20px; /* Space between the logo and the navigation links */
 }
-.container {
+
+.logo-circle img {
+    max-width: 80%; /* Make sure the image doesn't exceed the width of its container */
+    max-height: 80%; /* Make sure the image doesn't exceed the height of its container */
+}
+
+/* Add light mode and dark mode styles here */
+
+/* Add light mode and dark mode styles here */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+/* Light mode styles */
+/* Add your light mode styles here */
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Add additional dark mode styles here */
+
+
+
+.slider-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.slider input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-round {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider-round:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
     background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider-round {
+    background-color: #4CAF50;
+}
+
+input:focus + .slider-round {
+    box-shadow: 0 0 1px #4CAF50;
+}
+
+input:checked + .slider-round:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+}
+
+
+
+
+/* upload-styles.css */
+
+#upload-image {
+    text-align: center;
+    padding: 50px 0;
+    flex: 1; /* Fill remaining space */
+}
+
+#image-upload-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#image {
+    margin-bottom: 20px;
+}
+
+/* upload-styles.css */
+
+/* upload-styles.css */
+
+/* upload-styles.css */
+
+.logo-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #4CAF50; /* Green circle */
+    border-radius: 50%;
+    width: 200px; /* Adjust the width */
+    height: 200px; /* Adjust the height */
+    margin-bottom: 20px; /* Space between the logo and the navigation links */
+    overflow: hidden; /* Ensure the logo stays within the circle */
+}
+
+.logo-circle img {
+    max-width: 80%; /* Make sure the image doesn't exceed the width of its container */
+    max-height: 80%; /* Make sure the image doesn't exceed the height of its container */
+    display: block; /* Ensure the image behaves like a block element */
+    margin: auto; /* Center the image horizontally and vertically within its container */
+}
+
+
+.logo-circle a {
+    display: block; /* Make the whole logo clickable */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+}
+
+
+
+/* upload-styles.css */
+
+/* Other styles remain the same */
+
+#drop-area {
+    border: 2px dashed #ccc;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-input[type="file"] {
-    margin: 10px 0;
+
+#drop-label {
+    cursor: pointer;
 }
-.prediction {
+
+#preview-container {
     margin-top: 20px;
-    font-size: 1.2em;
-    font-weight: bold;
+}
+
+#preview-container img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+/* Add specific styles for symptom description page */
+#symptoms {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#symptoms .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#symptoms textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+#symptoms ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+#symptoms ul li {
+    margin-bottom: 10px;
+}
+
+#symptoms button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#symptoms button:hover {
+    background-color: #45a049;
+}
+
+
+
+
+
+/* Add specific styles for the contact form */
+#contact-form {
+    text-align: center;
+}
+
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-form label {
+    margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#contact-form button {
+    width: 150px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #45a049;
 }

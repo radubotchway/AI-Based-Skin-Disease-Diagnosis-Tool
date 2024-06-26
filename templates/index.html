@@ -1,24 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload an Image</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Dermaid</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/d014e09def.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Upload an Image for Skin Disease Prediction</h1>
-        <form method="post" enctype="multipart/form-data">
-            <input type="file" name="file" accept="image/*">
-            <br>
-            <input type="submit" value="Upload">
-        </form>
-        {% if prediction %}
-        <div class="prediction">
-            Prediction: {{ prediction }}
+    <div class="background"></div>
+    <div class="overlay"></div>
+    <div class="main-container">
+    <header>
+        <div class="logo-container">
+            <div class="logo-circle">
+                <img src="/Logo/dermaid-high-resolution-logo-white-transparent (1).png" alt="Dermaid Logo">
+            </div>
         </div>
-        {% endif %}
-    </div>
+        <div>
+            <nav>
+                <a href="about-us.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+        </div>
+        <div class="register-container">
+            <span class="slider-container">
+                <label class="slider">
+                    <input type="checkbox" id="slider">
+                    <span class="slider-round"></span>
+                </label>
+            </span>
+            <span><button class="login"><a href="login.html">login</a></button></span>
+            <span><button class="signup"><a href="signup.html">signup</a></button></span>
+        </div>
+    </header>
+
+    <section id="banner">
+        <div class="container">
+            <h1>Brief description of the tool</h1>
+            <a href="upload.html" class="btn">Get Started</a>
+        </div>
+    </section>
+
+
+    <section id="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>Step 1: Upload Image</h3>
+                    <p>Upload an image of the affected area.</p>
+                </div>
+                <div class="step">
+                    <h3>Step 2: Describe Symptoms</h3>
+                    <p>Provide a description of your symptoms.</p>
+                </div>
+                <div class="step">
+                    <h3>Step 3: Get Diagnosis</h3>
+                    <p>Receive a diagnosis based on the uploaded image and symptoms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <ul>
+                <li>AI Accuracy</li>
+                <li>Privacy Protection</li>
+                <li>Quick Results</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-brands fa-snapchat"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+        </div>
+        <div class="legal">
+            <a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a>
+        </div>
+    </footer>
+</div>
+
+    <script src="script.js"></script>
+    <script src="darkmode.js"></script>
 </body>
 </html>
