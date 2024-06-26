@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, render_template, request
 import tensorflow as tf
 import numpy as np
 import cv2 as cv
@@ -43,6 +43,43 @@ def upload_file():
             return render_template('index.html', prediction=result)
     return render_template('index.html')
 
+@app.route('/about-us.html')
+def about_us():
+    return render_template('about-us.html')
+
+
+@app.route('/contact.html')
+def contact():
+    return render_template('contact.html')
+
+
+@app.route('/diagnosis-result.html')
+def diagnosis_result():
+    return render_template('diagnosis-result.html')
+
+
+@app.route('/faq.html')
+def faq():
+    return render_template('faq.html')
+
+
+@app.route('/login.html')
+def login():
+    return render_template('login.html')
+
+@app.route('/signup.html')
+def signup():
+    return render_template('signup.html')
+
+
+@app.route('/symptoms.html')
+def symptoms():
+    return render_template('symptoms.html')
+
+@app.route('/upload.html')
+def upload():
+    return render_template('upload.html')
+
+
 if __name__ == '__main__':
-    # app.run(debug=True)
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(debug=True)

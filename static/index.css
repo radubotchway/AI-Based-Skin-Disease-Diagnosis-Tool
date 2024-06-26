@@ -1,0 +1,265 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-family: Arial, sans-serif;
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    /* height: 100vh; */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Optional: Add a content container to place content over the blurred background */
+.main-container {
+    position: relative;
+    z-index: 1; /* Ensure the container content is above the background */
+    color: white; /* Text color for visibility */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Padding around the content */
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/Logo/background-image.jpg');
+    background-size: cover; /* Ensure the image covers the whole background */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Avoid image repetition */
+    filter: blur(8px); /* Apply the blur effect */
+    -webkit-filter: blur(8px); /* For Safari */
+    z-index: -1; /* Place the background behind other content */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 8, 8, 0.5); /* Semi-transparent black overlay */
+    z-index: -1; /* Place the overlay behind the content but above the background */
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #4CAF50;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-circle img {
+    height: 80px;
+}
+
+nav {
+    margin: 30px 0 0 50px;
+}
+
+nav a {
+    padding-right: 60px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.register-container {
+    margin-right: 10px;
+    padding: 20px;
+}
+
+.login, .signup {
+    padding: 15px 0;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    background: none;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.login a, .signup a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 40px;
+
+}
+
+.login:hover, .signup:hover {
+    cursor: pointer;
+    background: #fff;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+}
+
+.login a:hover, .signup a:hover {
+    color: #4CAF50;
+}
+
+/* Slider */
+.slider-container {
+   margin-right: 20px;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.slider input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-round {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+    border: 1px solid #fff;
+}
+
+.slider-round:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider-round {
+    background-color: #4CAF50;
+}
+
+input:focus + .slider-round {
+    box-shadow: 0 0 1px #fff;
+}
+
+input:checked + .slider-round:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+}
+
+
+
+/* description */
+#banner {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#banner h1 {
+    margin-bottom: 30px;
+}
+
+#banner a {
+    background: green;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+
+/* how it works */
+#how-it-works {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.step {
+    flex: 1;
+    margin: 0 20px;
+}
+
+
+/* features */
+#features {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#features ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+#features ul li {
+    padding-top: 10px;
+}
+
+
+
+/* footer */
+footer {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.social-media i, .contact-info i {
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.legal a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.legal a:hover {
+    text-decoration: underline;
+}
