@@ -8,7 +8,7 @@ import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
 # Load dataset
-dataset_dir = r'C:\Users\ronar\Desktop\AI-Based Skin Disease Diagnosis Tool\Dataset\archive\skin-disease-datasaet\train_set'
+dataset_dir = r'C:\Users\ronar\Desktop\skin_disease\Dataset\archive\skin-disease-datasaet\train_set'
 train_dataset = image_dataset_from_directory(
     dataset_dir,
     validation_split=0.2,
@@ -61,7 +61,7 @@ model.compile(optimizer='adam',
 history = model.fit(
     train_dataset,
     validation_data=validation_dataset,
-    epochs=10
+    epochs=20
 )
 
 # Evaluate the model
@@ -69,8 +69,19 @@ loss, accuracy = model.evaluate(validation_dataset)
 print(f'Loss: {loss}')
 print(f'Accuracy: {accuracy}')
 
+# model summary
+model.summary() #OK
+
 # Save the model
-model.save('skin_disease_classifier.keras')
+model.save_weights('model.weights.h5')
+print("Done saving the model")
+
+
+
+
+
+
+
 
 # Plot training & validation accuracy and loss
 acc = history.history['accuracy']
@@ -78,7 +89,7 @@ val_acc = history.history['val_accuracy']
 loss = history.history['loss']
 val_loss = history.history['val_loss']
 
-epochs_range = range(10)
+epochs_range = range(20)
 
 plt.figure(figsize=(8, 8))
 plt.subplot(1, 2, 1)

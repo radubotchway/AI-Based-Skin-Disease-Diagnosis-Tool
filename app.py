@@ -1,13 +1,32 @@
 from flask import Flask, render_template, request
 import tensorflow as tf
+from tensorflow.keras import layers, models
 import numpy as np
 import cv2 as cv
 import os
 
 app = Flask(__name__)
 
-# Load the model
-model = tf.keras.models.load_model('skin_disease_classifier.keras')
+# Recreate the model architecture
+base_model = tf.keras.applications.MobileNetV2(input_shape=(128, 128, 3),
+                                               include_top=False,
+                                               weights='imagenet')
+
+base_model.trainable = False
+
+model = models.Sequential([
+    base_model,
+    layers.GlobalAveragePooling2D(),
+    layers.Dense(128, activation='relu'),
+    layers.Dense(9, activation='softmax')  # Adjust the number of classes if needed
+])
+
+# Build the model by passing a sample input shape
+model.build((None, 128, 128, 3))
+
+# Load the model weights
+model.load_weights('model.weights.h5')
+print("Model weights loaded")
 
 # Load class names
 with open('class_names.txt', 'r') as f:
@@ -82,4 +101,4 @@ def upload():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
