@@ -232,13 +232,12 @@ input:checked + .slider-round:before {
             </header>
 
     <section id="diagnosis-result">
-        <div class="container">
-            <h2>Diagnosis Result</h2>
-            <p>Here's the predicted condition along with a brief explanation:</p>
-            <div id="predicted-condition">
-                <!-- Display predicted condition here -->
+        <main>
+            <div class="container">
+                <h1>Diagnosis Result</h1>
+                <p>Prediction: {{ prediction }}</p>
             </div>
-        </div>
+        </main>
     </section>
 
     <section id="further-information">

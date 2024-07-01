@@ -11,7 +11,6 @@ body {
     padding: 0;
     background: #fff;
     font-family: Arial, sans-serif;
-    
 }
 
 .main-container {
@@ -86,9 +85,6 @@ a:hover {
     color: #4CAF50;
 }
 
-
-
-
 /* Slider */
 .slider-container {
    margin-right: 20px;
@@ -148,8 +144,6 @@ input:checked + .slider-round:before {
     transform: translateX(24px);
 }
 
-
-
 #drop-area {
     border: 2px dashed #ccc;
     padding: 20px;
@@ -170,9 +164,7 @@ input:checked + .slider-round:before {
     margin-top: 10px;
 }
 
-
-
-              /* footer */
+/* footer */
 footer {
     background-color: #4CAF50;
     color: #fff;
@@ -193,7 +185,6 @@ footer {
     cursor: pointer;
 }
 
-
 .legal a {
     color: #fff;
     text-decoration: none;
@@ -203,21 +194,37 @@ footer {
     text-decoration: underline;
 }
 
-
-
 .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            
-        }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        .form-container {
-            display: flex;
-            flex-direction: column;
-            padding: 15px;
-            width: 30%;
-        }
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 30%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
     </style>
 <script src="https://kit.fontawesome.com/d014e09def.js" crossorigin="anonymous"></script>
 </head>
@@ -248,19 +255,29 @@ footer {
             </div>
         </header>
 
-    <section id="upload-image">
-        <div class="container">
-            <h2>Upload Image</h2>
-            <p>Instructions: Clear guidelines on how to take and upload a photo of the affected skin area.</p>
-            <div id="drop-area">
-                <div class="form-group">
-                    <input type="file" id="image" accept="image/*" style="display: none;">
-                    <label for="image" id="drop-label">Drag & Drop or Click to Upload Image</label>
+        <section id="upload-image">
+            <div class="container">
+                <h2>Upload Image</h2>
+                <p>Instructions: Clear guidelines on how to take and upload a photo of the affected skin area.</p>
+                <form method="post" enctype="multipart/form-data">
+                    <div id="drop-area">
+                        <div class="form-group">
+                            <input type="file" id="image" name="file" accept="image/*" style="display: none;">
+                            <label for="image" id="drop-label">Drag & Drop or Click to Upload Image</label>
+                        </div>
+                        <div id="preview-container"></div>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" id="submit-button">Upload</button>
+                    </div>
+                </form>
+                {% if prediction %}
+                <div class="prediction" id="prediction-result">
+                    Prediction: {{ prediction }}
                 </div>
-                <div id="preview-container"></div>
+                {% endif %}
             </div>
-        </div>
-    </section>
+        </section>       
 
     <footer>
         <div class="footer-container">
@@ -285,7 +302,7 @@ footer {
 </div>
 
     <script src="script.js"></script>
-    <script src="upload-script.js"></script> <!-- Include the upload script -->
+    <script src="static/upload-script.js"></script>
     <script src="darkmode.js"></script>
 </body>
 </html>
