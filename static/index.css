@@ -182,20 +182,30 @@ input:checked + .slider-round:before {
 /* description */
 #banner {
     text-align: center;
-    padding: 50px 0;
+    padding: 50px 20px; /* Add some padding for better spacing */
 }
 
-#banner h1 {
-    margin-bottom: 30px;
+#banner .container {
+    max-width: 800px; /* Set a max width to prevent spreading */
+    margin: 0 auto; /* Center the container */
 }
 
-#banner a {
+#banner h2 {
+    margin-bottom: 30px; /* Add some margin to separate from the button */
+    font-size: 24px; /* Adjust font size if needed */
+    line-height: 1.5; /* Improve readability */
+}
+
+#banner a.btn {
     background: green;
     color: #fff;
     text-decoration: none;
     padding: 15px 30px;
     border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px; /* Add some margin to separate from the text */
 }
+
 
 
 /* how it works */

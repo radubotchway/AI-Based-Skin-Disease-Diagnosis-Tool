@@ -4,254 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Dermaid</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-    
     <style>
         body {
-    margin: 0;
-    padding: 0;
-    background: #fff;
-    font-family: Arial, sans-serif;
-    
-}
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
 
-.main-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-/* header */
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background: #4CAF50;
-}
+        /* header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #4CAF50;
+        }
 
-.logo-container {
-    display: flex;
-    flex-direction: row;
-}
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
 
-.logo-circle img {
-    height: 80px;
-}
+        .logo-circle img {
+            height: 80px;
+        }
 
-nav {
-    margin: 30px 0 0 50px;
-}
+        nav a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+        }
 
-nav a {
-    padding-right: 60px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 20px;
-}
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-a:hover {
-    text-decoration: underline;
-}
+        /* Main content */
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+        }
 
-.register-container {
-    margin-right: 10px;
-    padding: 20px;
-}
+        h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #4CAF50;
+        }
 
-/* .login, .signup {
-    padding: 15px 0;
-    border: 2px solid #fff;
-    border-radius: 50px;
-    background: none;
-    margin-left: 10px;
-    font-size: 15px;
-}
-
-.login a, .signup a {
-    color: #fff;
-    text-decoration: none;
-    padding: 15px 40px;
-
-}
-
-.login:hover, .signup:hover {
-    cursor: pointer;
-    background: #fff;
-    border: 2px solid #4CAF50;
-    color: #4CAF50;
-}
-
-.login a:hover, .signup a:hover {
-    color: #4CAF50;
-} */
-
-/* Slider */
-/* .slider-container {
-   margin-right: 20px;
-}
-
-.slider {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 26px;
-}
-
-.slider input[type="checkbox"] {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider-round {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 34px;
-    border: 1px solid #fff;
-}
-
-.slider-round:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 50%;
-}
-
-input:checked + .slider-round {
-    background-color: #4CAF50;
-}
-
-input:focus + .slider-round {
-    box-shadow: 0 0 1px #fff;
-}
-
-input:checked + .slider-round:before {
-    -webkit-transform: translateX(24px);
-    -ms-transform: translateX(24px);
-    transform: translateX(24px);
-} */
-
-
-
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
         /* footer */
-footer {
-    background-color: #4CAF50;
-    color: #fff;
-    text-align: center;
-    padding-bottom: 10px;
-}
+        footer {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: auto;
+        }
 
-.footer-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 50px;
-}
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 50px;
+            flex-wrap: wrap;
+        }
 
-.social-media i, .contact-info i {
-    padding: 5px;
-    font-size: 20px;
-    cursor: pointer;
-}
+        .contact-info, .social-media {
+            margin: 10px 0;
+        }
 
+        .contact-info h3, .social-media h3 {
+            margin-bottom: 10px;
+        }
 
-.legal a {
-    color: #fff;
-    text-decoration: none;
-}
+        .contact-info i, .social-media i {
+            margin: 5px;
+            font-size: 24px;
+            cursor: pointer;
+        }
 
-.legal a:hover {
-    text-decoration: underline;
-}
+        .legal a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .legal a:hover {
+            text-decoration: underline;
+        }
     </style>
-<script src="https://kit.fontawesome.com/d014e09def.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d014e09def.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="main-container">
-    <header>
-        <div class="logo-container">
-            <div class="logo-circle">
-                <img src="static/Logo/dermaid-high-resolution-logo-white-transparent (1).png" alt="Dermaid Logo">
+        <header>
+            <div class="logo-container">
+                <div class="logo-circle">
+                    <img src="static/Logo/dermaid-high-resolution-logo-white-transparent (1).png" alt="Dermaid Logo">
+                </div>
             </div>
-        </div>
-        <div>
             <nav>
                 <a href="about-us.html">About Us</a>
                 <a href="contact.html">Contact</a>
                 <a href="faq.html">FAQ</a>
             </nav>
-        </div>
-        <div class="register-container">
-            <!-- <span class="slider-container">
-                <label class="slider">
-                    <input type="checkbox" id="slider">
-                    <span class="slider-round"></span>
-                </label>
-            </span>
-            <span><button class="login"><a href="login.html">login</a></button></span>
-            <span><button class="signup"><a href="signup.html">signup</a></button></span> -->
-        </div>
-    </header>
+        </header>
 
-
-    <section id="team-introduction">
-        <div class="container">
-            <h2>Team Introduction</h2>
-            <p>Information about the team behind the tool, including their expertise and mission.</p>
-        </div>
-    </section>
-
-    <section id="technology">
-        <div class="container">
-            <h2>Technology</h2>
-            <p>Explanation of the AI technology used and its accuracy.</p>
-        </div>
-    </section>
-
-    <section id="privacy-policy">
-        <div class="container">
-            <h2>Privacy Policy</h2>
-            <p>Detailed information on how user data is handled and protected.</p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-container">
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                <i class="fa-solid fa-envelope"></i>
-                <i class="fa-solid fa-phone"></i>
+        <section id="team-introduction">
+            <div class="container">
+                <h2>About the Developer</h2>
+                <p>Welcome to Dermaid! My name is Ronard Adu-Botchway, and I am the sole developer behind this innovative tool. As a final-year Computer Engineering student at Kwame Nkrumah University of Science and Technology (KNUST), I have a passion for leveraging technology to solve real-world problems. With a focus on AI and machine learning, I created Dermaid to assist in the accurate diagnosis of skin diseases. I hope this tool proves helpful and enhances the field of dermatology.</p>
             </div>
-            <div class="social-media">
-                <h3>Follow Us</h3>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-github"></i>
-                <i class="fa-brands fa-discord"></i>
-                <i class="fa-brands fa-snapchat"></i>
-                <i class="fa-brands fa-whatsapp"></i>
+        </section>
+
+        <section id="technology">
+            <div class="container">
+                <h2>Technology</h2>
+                <p>Dermaid utilizes advanced AI technology powered by TensorFlow and Keras for its skin disease diagnosis. Our model achieves an accuracy rate of 95.13%, trained on a diverse dataset of skin images. This technology ensures precise identification of various skin conditions, providing reliable diagnostic assistance to users.</p>
             </div>
-        </div>
-        <div class="legal">
-            <a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a>
-        </div>
-    </footer>
-</div>
+        </section>
+
+        <section id="privacy-policy">
+            <div class="container">
+                <h2>Privacy Policy</h2>
+                <p>Your privacy is important to us. When you upload an image for diagnosis on Dermaid, it is temporarily stored on our secure servers only for the purpose of generating a diagnosis. Once the prediction is made, the uploaded image is immediately deleted from our servers. We do not retain or use your images for any other purposes. Rest assured that we adhere to strict data protection measures to safeguard your privacy throughout your interaction with Dermaid.</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="social-media">
+                    <h3>Follow Us</h3>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-discord"></i>
+                    <i class="fa-brands fa-snapchat"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="legal">
+                <a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a>
+            </div>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
     <script src="darkmode.js"></script>
