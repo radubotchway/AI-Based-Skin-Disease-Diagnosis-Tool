@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 import tensorflow as tf
 from tensorflow.keras import layers, models
@@ -73,9 +74,13 @@ def upload_file():
 def about_us():
     return render_template('about-us.html')
 
-@app.route('/contact.html')
+@app.route('/contact.html', methods=['GET', 'POST'])
 def contact():
+    if request.method == 'POST':
+        # Here, you can add any processing logic if needed, for now, it just redirects back to the contact page
+        return redirect(url_for('contact'))
     return render_template('contact.html')
+
 
 @app.route('/diagnosis-result.html')
 def diagnosis_result():
